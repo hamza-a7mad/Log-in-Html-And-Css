@@ -1,0 +1,210 @@
+/* Star Global Elements */
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+   
+    margin: 0;
+    
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+.contanier{
+    padding-left:15px ;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small Screan */
+@media (min-width:768px){
+    .contanier{
+        width: 750px;
+    }
+}
+/* Meduim Screan */
+@media (min-width:992px){
+    .contanier{
+        width: 970px;
+    }
+}
+@media (min-width:1120px){
+    .contanier{
+        width:1170px
+    }
+}
+/* End Global Elements */
+/* Start Tape */
+.tape{
+    background-image: url(../image/wallpaperflare.com_wallpaper\ \(45\).jpg);
+
+    background-size: cover;
+    background-position: center;
+    height: 100vh  ;
+}
+.tape .logo h1{
+    color: #715c5cbd;
+}
+@media (max-width:767px){
+    .tape .logo h1{
+        position: relative;
+        left: -80px;
+    }
+}
+.tape .logo h1 span{
+    color: red;
+}
+.tape .list .link li{
+    position: relative;
+}
+.tape .list .link li::before{
+    content: "";
+    position: absolute;
+    bottom:-5px;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    transition: 0.5s;
+}
+.tape .list .link li:hover::before{
+    background-color: #00e2ff;
+    transform: scaleX(-1);
+}
+@media (max-width:767px){
+    .tape .list{
+        flex-direction: column;
+    }
+    .tape .list .link{
+        flex-direction: column;
+    }
+}
+.tape .list .link .log{
+    transition: 0.5s;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width:767px){
+    .tape .list .link .log{
+        margin-top: 18px;
+        position: absolute;
+        right: 43px;
+        top: 5px;
+        padding: 10px;
+        width: 90px;
+        height: 40px;
+    }
+}
+.tape .list .link .log:hover {
+    color: #1f0404;
+    background-color: #fff;
+    border-color: #1f0404;
+}
+/* End Tape */
+/* Start Bulid-box */
+.tape .build-box {
+    width: 400px;
+    padding:20px;
+    height: 450px;
+     background-color:rgba(255,255,255,0.05);
+     backdrop-filter: blur(10px);
+     box-shadow: 0 0px 7px rgb(255,255,255,72%);
+}
+@media (max-width:767px){
+    .tape .build-box {
+        width: 350px;
+    }
+}
+.tape .build-box .title .exit{
+    right: -20px;
+    font-size: 20px;
+    top: -20px;
+    padding: 7px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    cursor: pointer;
+    margin: 1px;
+    transition: 0.5s;
+}
+.tape .build-box .title .exit:hover{
+    color:red;
+    background-color:#162938;
+}
+.tape .build-box .title h1{
+    font-size: 30px;
+    margin: auto;
+    padding: 10px 25px;
+    border-radius: 15px;
+}
+.tape .build-box .input p{
+    color: #325363;
+}
+.tape .build-box .input{
+    text-align: left;
+    border-bottom: 1px solid #006fa2;
+    padding-bottom: 7px;
+}
+.tape .build-box .input input{
+    border: none;
+    outline: none;
+    background:transparent;
+    width: 100%;
+    height: 100%;
+}
+.tape .build-box .agree input[type="checkbox"]{
+    display: none;
+  
+}
+.tape .build-box .agree label{
+    margin-left: 30px;
+    font-size: 15px;
+   
+    color: #333;
+}
+.tape .build-box .agree label::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border: 2px solid #fff;
+    left: 0;
+    cursor: pointer;
+}
+.tape .build-box .agree label::after{
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 12px;
+    color: white;
+    width: 17px;
+    cursor: pointer;
+    height: 17px;
+    position: absolute;
+    background: #112d44;
+    left: 0;
+    top: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    transform: scale(0);
+}
+.tape .build-box .agree input[type="checkbox"]:checked + label::after{
+    transform: scale(1);
+}
+.tape .build-box .link a{
+    transition: 0.5s;
+}
+.tape .build-box .link:hover a{
+    background-color: #162938;;
+}
+/* End Bulid-box */
